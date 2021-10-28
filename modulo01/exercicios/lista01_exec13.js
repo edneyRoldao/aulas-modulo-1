@@ -67,10 +67,10 @@ function calculoGaloes(areaTotal) {
 }
 
 function calculoLatasEGaloes(area) {
-    let areaLata = 108;
-    let areaGalao = 21.6;
     let latas = 0;
     let galoes = 0;
+    let areaLata = 108;
+    let areaGalao = 21.6;
     
     while (area >= (areaGalao * 3)) {
         area = area - areaLata;
