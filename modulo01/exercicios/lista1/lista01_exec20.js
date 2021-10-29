@@ -20,7 +20,7 @@ function getIdade(dtNascimento, dtAtual) {
         anos--;    
     }
 
-    let totalDias = ((anos - 1) * 365) + (mesAtual * 30) + diaAtual;
+    let totalDias = (anos * 365) + (mesAtual * 30) + diaAtual;
 
     console.log("idade: ", anos);
     console.log("dias vida", totalDias);
