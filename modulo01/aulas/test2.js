@@ -1,21 +1,12 @@
+let numero = process.argv[2];
 
-// no dia 10, estava assim para os
-function transferenciaValor(origem, destino, dataTransacao) {    
+function isPar(n) {
+    return n % 2 == 0;
 }
 
-
-// ricardo - dia 12
-function transferenciaValor(origem, destino, dataTransacao) {
-    console.log(dataTransacao);    
+function isImpar(n) {
+    return !isPar(n);
 }
 
-// edney - dia 12
-function transferenciaValor(origem, destino) {
-    efgsdfgsdfg
-    sdfgsdfgsdfg
-    sdfgsdfgsdfg
-    sdfgsfdsgsdfg
-}
-
-
-// dia de colocar em producao - dia 20
+console.log(isPar(numero));
+console.log(isImpar(numero));
