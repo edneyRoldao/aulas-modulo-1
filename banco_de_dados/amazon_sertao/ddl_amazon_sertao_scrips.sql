@@ -14,13 +14,13 @@ create table tb_usuario (
     nome_completo   varchar(255)                            ,
     email           varchar(100)    not null UNIQUE         ,
     telefone        varchar(100)    not null                ,
-    data_criacao    TIMESTAMP                               ,
+    data_criacao    TIMESTAMP       not null DEFAULT NOW()  ,
     primary key (id)
 );
 
 create table tb_tipo_logradouro (
     id          int(10)         not null AUTO_INCREMENT ,
-    descricao   varchar(255)    not null                ,
+    descricao   varchar(255)    not null UNIQUE         ,
     primary key (id)                                    
 )
 
@@ -41,3 +41,9 @@ create table tb_endereco (
     FOREIGN KEY (id_usuario)            REFERENCES tb_usuario (id)                  ,
     FOREIGN KEY (id_tipo_logradouro)    REFERENCES tb_tipo_logradouro (id)
 );
+
+
+-- alterando estrutura das tabelas
+ALTER TABLE tb_endereco ADD COLUMN nome_recado VARCHAR(255) AFTER complemento;
+
+
